@@ -21,7 +21,7 @@ import StepUp from "./step-up.svg";
 import Verification from "./verification.svg";
 import View from "./view.svg";
 import WhatsApp from "./whatsapp.svg";
-
+import Login from "./login.svg"
 export const Icons = {
   Add,
   Assign,
@@ -46,4 +46,5 @@ export const Icons = {
   Verification,
   View,
   WhatsApp,
+  Login,
 };
