@@ -22,6 +22,8 @@ import Verification from "./verification.svg";
 import View from "./view.svg";
 import WhatsApp from "./whatsapp.svg";
 import Login from "./login.svg"
+import cup from "./cup.svg"
+import arrowRight from "./arrow-right.svg"
 export const Icons = {
   Add,
   Assign,
@@ -47,4 +49,6 @@ export const Icons = {
   View,
   WhatsApp,
   Login,
+  cup,
+  arrowRight
 };

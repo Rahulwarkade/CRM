@@ -18,9 +18,11 @@ body {
   --color-blue-3e91ff : #3E91FF;
   --color-gray-767878 : #767878;
   --color-gray-414141 : #414141;
+  --color-gray-b7b7b7 : #B7B7B7;
   --color-black-000000 : #000000;
   --color-red-e52c42 : #E52C42;
   --color-yellow-d88500 : #D88500;
+  --color-yellow-d88b500 : #D8B500;
   --color-green-36ce00 : #36CE00;
   --color-blue-eef7ff : #EEF7FF;
   --color-blue-d9ecff : #D9ECFF;
@@ -34,10 +36,14 @@ body {
   --color-blue-193d8f : #193D8F;
   --color-blue-142657 : #142657;
   --color-blue-d9d9d9 : #D9D9D9;
+  --color-blue-ffffffb2 : #FFFFFFB2;
   --color-overlay-00000040 : #00000040;
   --color-blue-ffffff80 : #FFFFFF80;
   --color-blue-ffffff50 : #FFFFFF50;
-
+  --color-black-000000 : #000000;
+  --color-black-787878 : #787878;
+  --color-black-414141 : #414141;
+  
   --text-fs-16: 1rem;
   --text-fs-20: 1.25rem;
   --text-fs-24: 1.5rem;
