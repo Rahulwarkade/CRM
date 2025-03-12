@@ -24,6 +24,15 @@ import WhatsApp from "./whatsapp.svg";
 import Login from "./login.svg"
 import cup from "./cup.svg"
 import arrowRight from "./arrow-right.svg"
+import userEdit from "./user-edit.svg"
+import settings2 from "./setting-2.svg"
+import lougOut1 from "./logout-1.svg"
+import searchNormal from "./search-normal.svg"
+import arrowDown from "./arrow-down.svg"
+import profileAdd from "./profile-add.svg"
+import receiveSquare from "./receive-square.svg"
+import add1 from "./add-1.svg"
+
 export const Icons = {
   Add,
   Assign,
@@ -50,5 +59,13 @@ export const Icons = {
   WhatsApp,
   Login,
   cup,
-  arrowRight
+  arrowRight,
+  userEdit,
+  settings2,
+  lougOut1,
+  searchNormal,
+  arrowDown,
+  profileAdd,
+  receiveSquare,
+  add1
 };

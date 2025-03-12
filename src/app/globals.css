@@ -17,6 +17,7 @@ body {
   --color-blue-ffffff59 : #FFFFFF59;
   --color-blue-3e91ff : #3E91FF;
   --color-gray-767878 : #767878;
+  --color-gray-787878 : #787878;
   --color-gray-414141 : #414141;
   --color-gray-b7b7b7 : #B7B7B7;
   --color-black-000000 : #000000;
@@ -43,7 +44,10 @@ body {
   --color-black-000000 : #000000;
   --color-black-787878 : #787878;
   --color-black-414141 : #414141;
-  
+  --color-green-36ce00 : #36CE00;
+  --color-white-ffffffbf : #FFFFFFBF;
+  --color-red-e52c42 : #E52C42;
+
   --text-fs-16: 1rem;
   --text-fs-20: 1.25rem;
   --text-fs-24: 1.5rem;
