@@ -5,7 +5,8 @@ import { Container, Text } from "@/components/common";
 
 const DashboardLayout: React.FC = () => {
   return (
-    <Container maxWidth="full" padding="none">
+    <Container maxWidth="full" padding="none" centered={false}>
+
       <Header />
       {/* Stats */}
       <Container

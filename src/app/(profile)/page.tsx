@@ -1,46 +1,15 @@
 import React from "react";
-import { Text, Container, Button } from "@/components/common";
+import { Container } from "@/components/common";
+import { DashboardLayout } from "@/components";
 
 const Profile = () => {
   return (
     <Container
-      maxWidth="lg"
-      padding="lg"
-      bgColor="bg-white"
-      rounded="lg"
-      shadow="md"
-      border
+      maxWidth="full"
+      padding="none"
+      className="w-full min-h-dvh relative bg-opacity-50 bg-gradient-to-b from-blue-e5e5e583 to-blue-81b8ff85 px-[5%] md:px-[8%] py-[40px]"
     >
-      <Text variant="h1" weight="bold" className="mb-4">
-        User Profile
-      </Text>
-      <Text variant="p" className="mb-6">
-        Welcome to your profile dashboard
-      </Text>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Container padding="md" bgColor="bg-gray-50" rounded="md" border>
-          <Text variant="h3" weight="semibold" className="mb-3">
-            Personal Information
-          </Text>
-          <Text variant="p" className="mb-2">
-            Manage your personal details
-          </Text>
-          <Button variant="outline" size="sm" className="mt-2">
-            Edit Profile
-          </Button>
-        </Container>
-        <Container padding="md" bgColor="bg-gray-50" rounded="md" border>
-          <Text variant="h3" weight="semibold" className="mb-3">
-            Account Settings
-          </Text>
-          <Text variant="p" className="mb-2">
-            Update your account preferences
-          </Text>
-          <Button variant="outline" size="sm" className="mt-2">
-            Manage Settings
-          </Button>
-        </Container>
-      </div>
+      <DashboardLayout/>
     </Container>
   );
 };

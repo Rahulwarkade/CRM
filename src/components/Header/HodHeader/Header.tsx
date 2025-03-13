@@ -10,8 +10,9 @@ const Header: React.FC = () => {
   return (
     <Container
       maxWidth="full"
-      className="relative flex justify-between items-center"
+      className="relative flex items-center justify-between"
       padding="none"
+      centered={false}
     >
       <UserProfileCard />
       <BreadcrubNav />

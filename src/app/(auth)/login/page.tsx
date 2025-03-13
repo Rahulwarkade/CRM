@@ -1,25 +1,17 @@
 import React from "react";
-import { Container, Text, Button } from "@/components/common";
+import { Container } from "@/components/common";
+import { Login } from "@/components";
 
-const Login = () => {
+const Page = () => {
   return (
     <Container
-      maxWidth="md"
-      padding="lg"
-      bgColor="bg-white"
-      rounded="lg"
-      shadow="md"
-      border
+      maxWidth="full"
+      padding="none"
+      className="w-full h-screen relative"
     >
-      <Text variant="h2" align="center" weight="bold" className="mb-6">
-        Login
-      </Text>
-      <Text className="mb-4">Please enter your credentials to login</Text>
-      <div className="mt-6">
-        <Button fullWidth>Sign In</Button>
-      </div>
+      <Login />
     </Container>
   );
 };
 
-export default Login;
+export default Page;

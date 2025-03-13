@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import { Icons } from "@/assets/icons";
 import Image from "next/image";
@@ -61,7 +60,7 @@ const Login: React.FC = () => {
                 <Input
                   type="email"
                   placeholder="Enter Email Id"
-                  classname="w-full h-full rounded-[28px] bg-blue-d9ecff px-6 py-[18px]"
+                  classname="w-full h-full rounded-[28px] bg-blue-d9ecff px-6 py-[18px] outline-none"
                 />
                 <span className="absolute top-1/2 -translate-y-1/2 right-6">
                   <Image src={Icons.Mail} width={20} height={20} alt="Mail" />
@@ -72,7 +71,7 @@ const Login: React.FC = () => {
                 <Input
                   type="password"
                   placeholder="Enter Password"
-                  classname="w-full h-full rounded-[28px] bg-blue-d9ecff px-6 py-[18px]"
+                  classname="w-full h-full rounded-[28px] bg-blue-d9ecff px-6 py-[18px] outline-none"
                 />
                 <span className="absolute top-1/2 -translate-y-1/2 right-6">
                   <Image src={Icons.View} width={20} height={20} alt="View" />
@@ -98,7 +97,7 @@ const Login: React.FC = () => {
       {showOtp && (
         <Container
           maxWidth="full"
-          className="h-full absolute bg-overlay-00000040 backdrop-blur-sm flex justify-center items-center"
+          className="w-full h-full absolute bg-overlay-00000040 backdrop-blur-sm flex justify-center items-center"
           padding="none"
         >
           <Container

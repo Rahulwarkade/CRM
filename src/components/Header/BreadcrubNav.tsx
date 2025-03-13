@@ -8,7 +8,7 @@ const BreadcrubNav = () => {
       <Text
         variant="h3"
         weight="semibold"
-        className="text-[1rem] 2xl:text-[2rem] text-[#000000]"
+        className="text-[1rem] 2xl:text-[2rem] text-[#000000] text-center"
       >
         Home
       </Text>

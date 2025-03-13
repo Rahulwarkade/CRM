@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { dmSans } from "@/assets/fonts/font";
 import "./globals.css";
 import ReduxProvider from "@/store/provider";
-import { Text, Container } from "@/components/common";
+import { Container } from "@/components/common";
 
 export const metadata: Metadata = {
   title: "Toneop Eats CRM",
@@ -20,7 +20,6 @@ const RootLayout = ({
         <ReduxProvider>
           <Container maxWidth="full" padding="none">
             {children}
-            <Text variant="p">main</Text>
           </Container>
         </ReduxProvider>
       </body>
