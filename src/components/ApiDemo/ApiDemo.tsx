@@ -9,7 +9,7 @@ import {
   Post,
   NewPost,
 } from "@/store/slices/apiDemoSlice";
-import { Container, Text, Button, Input } from "@/components/common";
+import { Container, Text, Button, Input, TextArea } from "@/components/common";
 
 const ApiDemo = () => {
   const dispatch = useAppDispatch();
@@ -82,22 +82,17 @@ const ApiDemo = () => {
           </Container>
 
           <Container className="mb-4">
-            <label
-              htmlFor="body"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              Content
-            </label>
-            <textarea
+            <TextArea
+              label="Content"
               id="body"
               name="body"
               value={formData.body}
               onChange={handleInputChange}
-              rows={4}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              variant="outlined"
+              inputSize="md"
               required
-              aria-label="Content"
               placeholder="Enter content here"
+              aria-label="Content"
             />
           </Container>
 

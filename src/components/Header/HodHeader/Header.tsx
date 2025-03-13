@@ -1,15 +1,22 @@
 import React from "react";
-import { ActionPanel, BreadcrubNav, UserProfileCard } from "@/components";
+import {
+  ActionPanel,
+  BreadcrubNav,
+  UserProfileCard,
+  Container,
+} from "@/components";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
-    <>
-      <div className="w-full relative flex justify-between items-center">
-        <UserProfileCard />
-        <BreadcrubNav />
-        <ActionPanel />
-      </div>
-    </>
+    <Container
+      maxWidth="full"
+      className="relative flex justify-between items-center"
+      padding="none"
+    >
+      <UserProfileCard />
+      <BreadcrubNav />
+      <ActionPanel />
+    </Container>
   );
 };
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { dmSans } from "@/assets/fonts/font";
 import "./globals.css";
 import ReduxProvider from "@/store/provider";
-import { Text } from "@/components/common";
+import { Text, Container } from "@/components/common";
 
 export const metadata: Metadata = {
   title: "Toneop Eats CRM",
@@ -18,8 +18,10 @@ const RootLayout = ({
     <html lang="en" className={dmSans.variable}>
       <body className={`antialiased`}>
         <ReduxProvider>
-          {children}
-          <Text variant="p">main</Text>
+          <Container maxWidth="full" padding="none">
+            {children}
+            <Text variant="p">main</Text>
+          </Container>
         </ReduxProvider>
       </body>
     </html>

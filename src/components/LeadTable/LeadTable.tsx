@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Filter, LeadTableRow, SearchBar } from "@/components";
-import Image from "next/image";
+import { Container, Text, Image, Input } from "@/components/common";
 import { Icons } from "@/assets/icons";
 
 interface ClientDetails {
@@ -15,9 +15,10 @@ interface ClientDetails {
   duration: string;
 }
 
-const LeadTable = () => {
+const LeadTable: React.FC = () => {
   const [columnOrder, setColumnOrder] = useState<string[]>([]);
   const [clientDetails, setClientDetails] = useState<ClientDetails[]>([]);
+  const [selectAll, setSelectAll] = useState(false);
 
   useEffect(() => {
     setColumnOrder([
@@ -86,76 +87,116 @@ const LeadTable = () => {
   }, []);
 
   return (
-    <>
-      <div className="min-w-[800px] rounded-[40px] bg-blue-ffffff59 ">
-        <div className="w-full relative  p-10 flex flex-col gap-10">
-          {/* Search bar, Filter and Controlers */}
-          <div className="w-full relative flex justify-between">
-            {/* Search Bar and Filter Component */}
-            <div className="w-full relative flex gap-4">
-              <SearchBar />
-              <Filter />
-            </div>
-            {/* Controlers  */}
-            <div className="relative flex gap-2 2xl:gap-4">
-              <span className="size-[48px] rounded-full bg-white flex items-center justify-center">
-                <Image src={Icons.add1} alt="add" width={24} height={24} />
-              </span>
-              <span className="size-[48px] rounded-full bg-blue-ffffff59 flex items-center justify-center">
-                <Image
-                  src={Icons.profileAdd}
-                  alt="add"
-                  width={24}
-                  height={24}
-                />
-              </span>
-              <span className="size-[48px] rounded-full bg-white flex items-center justify-center">
-                <Image
-                  src={Icons.receiveSquare}
-                  alt="add"
-                  width={24}
-                  height={24}
-                />
-              </span>
-            </div>
-          </div>
-          {/* Table  */}
+    <Container
+      maxWidth="none"
+      className="min-w-[800px] rounded-[40px] bg-blue-ffffff59"
+      padding="none"
+    >
+      <Container
+        maxWidth="none"
+        className="w-full relative p-10 flex flex-col gap-10"
+        padding="none"
+      >
+        {/* Search bar, Filter and Controllers */}
+        <Container
+          maxWidth="none"
+          className="w-full relative flex justify-between"
+          padding="none"
+        >
+          {/* Search Bar and Filter Component */}
+          <Container
+            maxWidth="none"
+            className="w-full relative flex gap-4"
+            padding="none"
+          >
+            <SearchBar />
+            <Filter />
+          </Container>
+          {/* Controllers */}
+          <Container
+            maxWidth="none"
+            className="relative flex gap-2 2xl:gap-4"
+            padding="none"
+          >
+            <Container
+              maxWidth="none"
+              className="size-[48px] rounded-full bg-white flex items-center justify-center"
+              padding="none"
+            >
+              <Image src={Icons.add1.src} alt="add" width={24} height={24} />
+            </Container>
+            <Container
+              maxWidth="none"
+              className="size-[48px] rounded-full bg-blue-ffffff59 flex items-center justify-center"
+              padding="none"
+            >
+              <Image
+                src={Icons.profileAdd.src}
+                alt="add"
+                width={24}
+                height={24}
+              />
+            </Container>
+            <Container
+              maxWidth="none"
+              className="size-[48px] rounded-full bg-white flex items-center justify-center"
+              padding="none"
+            >
+              <Image
+                src={Icons.receiveSquare.src}
+                alt="add"
+                width={24}
+                height={24}
+              />
+            </Container>
+          </Container>
+        </Container>
 
+        {/* Table */}
+        <Container maxWidth="none" className="w-full" padding="none">
           <table className="w-full">
             <thead>
-              {/* Table Head */}
-              <tr className="">
+              <tr>
                 <th className="text-start">
-                  <input type="checkbox" />
+                  <label className="sr-only" htmlFor="select-all">
+                    Select all rows
+                  </label>
+                  <Input
+                    id="select-all"
+                    type="checkbox"
+                    checked={selectAll}
+                    onChange={(e) => setSelectAll(e.target.checked)}
+                    aria-label="Select all rows"
+                  />
                 </th>
-                {columnOrder.map((column: string, index: number) => {
-                  return (
-                    <th
-                      key={`head${index}`}
-                      className="text-start text-sm 2xl:text-base font-semibold text-black-000000 capitalize"
+                {columnOrder.map((column: string, index: number) => (
+                  <th key={`head${index}`}>
+                    <Text
+                      variant="span"
+                      weight="semibold"
+                      size="base"
+                      className="text-black-000000 capitalize"
+                      align="left"
                     >
                       {column}
-                    </th>
-                  );
-                })}
+                    </Text>
+                  </th>
+                ))}
               </tr>
             </thead>
             <tbody className="w-full">
-              {/* Table Row */}
-              <tr className="h-[30px]"></tr>
-              {clientDetails.map((client: ClientDetails, index: number) => {
-                return (
-                  <React.Fragment key={`client${index}`}>
-                    <LeadTableRow client={client} />
-                    <tr className="h-[30px]"></tr>
-                  </React.Fragment>
-                );
-              })}
+              <tr className="h-[30px]" />
+              {clientDetails.map((client: ClientDetails, index: number) => (
+                <React.Fragment key={`client${index}`}>
+                  <LeadTableRow client={client} selected={selectAll} />
+                  <tr className="h-[30px]" />
+                </React.Fragment>
+              ))}
             </tbody>
           </table>
-        </div>
-      </div>
-    </>
+        </Container>
+      </Container>
+    </Container>
   );
 };
 

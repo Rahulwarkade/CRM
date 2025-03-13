@@ -19,7 +19,11 @@ const GlobalError = ({
   return (
     <html>
       <body>
-        <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gray-50">
+        <Container
+          maxWidth="full"
+          className="min-h-screen flex flex-col items-center justify-center p-4 bg-gray-50"
+          padding="none"
+        >
           <Container
             maxWidth="md"
             padding="lg"
@@ -56,7 +60,11 @@ const GlobalError = ({
                 </Text>
               </Container>
             )}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <Container
+              maxWidth="full"
+              padding="none"
+              className="flex flex-col sm:flex-row gap-4"
+            >
               <Button onClick={() => reset()} variant="primary">
                 Try again
               </Button>
@@ -65,9 +73,9 @@ const GlobalError = ({
                   Go back home
                 </Button>
               </Link>
-            </div>
+            </Container>
           </Container>
-        </div>
+        </Container>
       </body>
     </html>
   );
